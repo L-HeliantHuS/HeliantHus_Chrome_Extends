@@ -1,0 +1,37 @@
+{
+	"manifest_version": 2,
+	"name": "HeliantHuS Chrome Extends",
+	"version": "1.0",
+	"description": "做一个可能是常用的插件吧.",
+	"author": "HeliantHuS",
+	"homepage_url": "https://helianthus.top",
+	"icons":
+	{
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content-script.js"]
+		}
+	],
+	"web_accessible_resources": 
+	[
+		"inject.js"
+	],
+	"permissions": [
+		"contextMenus",
+		"tabs"
+	],
+	"background":
+	{
+		"scripts": ["background.js"]
+    }
+}
